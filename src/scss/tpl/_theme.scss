@@ -1,0 +1,362 @@
+
+/*
+  STYLES FOR
+*/
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $fontFamily, sans-serif;
+  font-size: inherit;
+  line-height: 1.5;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media (max-width: 660px) {
+    font-size: 14px;
+  }
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  // max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  // z-index: 10;
+  &--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    // &:after,
+    // &:before{
+    //   display: none;
+    // }
+  }
+}
+
+
+/*
+  Classes for margins paddings and font sizes blocks and titles
+*/
+
+.title-section {
+  font-weight: $medium;
+  font-size: $titleSize;
+  text-align: center;
+  color: $semiMainColor;
+  margin-bottom: 40px;
+  @media (max-width: 960px) {
+    font-size: 25px;
+  }
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+/*================================*/
+
+
+/*
+  default button styles
+*/
+.button {
+  width: 230px;
+  height: 46px;
+  max-width: 100%;
+  border: 1px solid $semiMainColor;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: $semiMainColor;
+  font-size: 18px;
+  font-weight: $medium;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  &:hover {
+    background-color: $semiMainColor;
+    color: $extraDarkColor;
+  }
+  @media (max-width: 560px) {
+    height: auto;
+    line-height: 35px;
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    height: auto;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}
+
+
+/*
+  Typography styles for REDACTOR start
+*/
+
+.redactor-s {
+  color: $extraDarkColor;
+  font-size: 16px;
+  font-weight: $regular;
+  * {
+    color: $extraDarkColor;
+    font-weight: $regular;
+    font-size: 16px;
+  }
+  b, strong {
+    font-weight: $bold;
+  }
+  i, em {
+    font-style: italic;
+  }
+  u {
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: underline;
+    color: $mainColor;
+  }
+  blockquote {
+    font-style: italic;
+
+  }
+  p {
+    font-size: rem(16);
+  }
+
+  ul li {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      left: 0;
+      top: 10px;
+      background-color: $nonActiveColor;
+    }
+
+  }
+  ol {
+    padding-left: 15px;
+  }
+  ol li {
+    list-style-type: decimal;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /*
+    titles
+  */
+
+  h1, h2, h3, h4 {
+    font-weight: $bold;
+    color: $extraDarkColor;
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  @media (max-width: 660px) {
+    font-size: 14px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-weight: $regular;
+  color: $semiMainColor;
+  @media (max-width: 660px) {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .redactor-s h1,
+  .redactor-s h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .redactor-s h1,
+  .redactor-s h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+
+  .redactor-s h3,
+  .redactor-s h4 {
+    margin-bottom: 20px;
+  }
+
+  .redactor-s h3 {
+    font-size: 20px;
+  }
+
+  .redactor-s h4 {
+    font-size: 18px;
+  }
+
+  .redactor-s h5,
+  .redactor-s h6 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 660px) {
+  .redactor-s h1,
+  .redactor-s h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .redactor-s h3,
+  .redactor-s h4 {
+    margin-bottom: 10px;
+  }
+
+  .redactor-s h3 {
+    font-size: 18px;
+  }
+
+  .redactor-s h4 {
+    font-size: 16px;
+  }
+
+  .redactor-s h5,
+  .redactor-s h6 {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
+
+
+/*
+  Typography styles end
+*/
+
+
+/*
+  PLACEHOLDERS AND FORMS STYLES START
+*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: $light;
+  font-size: $fz_placeholder;
+  color: $nonActiveColor;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  font-weight: $light;
+  font-size: $fz_placeholder;
+  color: $nonActiveColor;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  font-weight: $light;
+  font-size: $fz_placeholder;
+  color: $nonActiveColor;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-weight: $light;
+  font-size: $fz_placeholder;
+  color: $nonActiveColor;
+}
+textarea,input,form,label{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+
+/*
+  PLACEHOLDERS AND FORMS STYLES END
+*/
+
+
+
+
+/*
+  OPTIONS CLASSES START
+*/
+
+
+/*Validation for Yii*/
+
+.help-block{
+  width: 100%;
+}
+.help-block-error {
+  color: $errorColor;
+  font-size: 14px;
+  position: absolute; }
+
+.has-error input {
+  border-color: $errorColor; }
+
+.has-error textarea {
+  border-color: $errorColor; }
+
+
+
